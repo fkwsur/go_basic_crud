@@ -1,4 +1,4 @@
-package main
+package echo
 
 import (
 	"encoding/json"
@@ -39,7 +39,7 @@ type BoardBody struct {
 }
 
 func DBConnection() {
-	host := "root:1111@tcp(127.0.0.1:3306)/rootdb?charset=utf8mb4&parseTime=True&loc=Local"
+	host := "root:11111111@tcp(127.0.0.1:3306)/rootdb?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(host), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true,
